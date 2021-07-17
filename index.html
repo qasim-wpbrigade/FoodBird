@@ -12,31 +12,104 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
+  <!----------------
+    Style sheats
+  ------------------>
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+  <!----------------
+    Container start
+  ------------------>
+  <div class="container">
+    <!-- Aside start -->
+    <aside class="aside">
+      <!-- Brand logo -->
+      <div class="brand-logo">
+        <a href="#">
+          <img src="img/logo.png" alt="Brand logo">
+        </a>
+      </div>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+      <nav class="aside-nav">
+        <!-- sidebar menu -->
+        <ul class="aside-menu">
+          <li class="nav-item"><a href="#" class="nav-link active">home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">foodBirds</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">partners</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- sidebar social links -->
+      <ul class="social-links">
+        <li><a href="#"><img src="img/fbicon.png" alt="facebook"></a></li>
+        <li><a href="#"><img src="img/pinterst.png" alt="pintrest"></a></li>
+        <li><a href="#"><img src="img/istagram.png" alt="instagram"></a></li>
+      </ul>
+    </aside>
+    <!-- Aside end -->
+
+    <!-- Main start -->
+    <main class="main">
+      <!-- Intro section -->
+      <section class="intro">
+        <div class="thumbnail">
+          <img src="img/homepagebannerimg.png" alt="Intro thumbnail">
+          <h1 class="title">welkom</h1>
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in
+          </p>
+          <a href="#" class="more-btn">lees meer</a>
+        </div>
+      </section>
+      <!-- slider section -->
+      <section class="slider-sec">
+        <h2 class="title">foodbirds</h2>
+        <div class="owl-carousel owl-theme owl-loaded slider">
+          <div class="owl-stage-outer">
+            <div class="arrow prev"><img src="img/leftarrow.png" alt="left"></div>
+            <div class="arrow next"><img src="img/rightarrow.png" alt="right"></div>
+            <div class="owl-stage">
+              <div class="owl-item"><img src="/img/sliderimg.png" alt="slider thumbnail"></div>
+              <div class="owl-item"><img src="/img/sliderimg2.png" alt="slider thumbnail"></div>
+              <div class="owl-item"><img src="/img/sliderimg.png" alt="slider thumbnail"></div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h2 class="title">lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo quas mollitia cum ipsa ullam</p>
+          <a class="btn" href="#">naar deze</a>
+        </div>
+      </section>
+    </main>
+    <!-- Main end -->
+  </div>
+  <!----------------
+    Container end
+  ------------------>
+
+  <!----------------
+    Scripts
+  ------------------>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>

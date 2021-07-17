@@ -1,15 +1,21 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+@font-face {
+  font-family: ChaparralPro;
+  src: url("/fonts/ChaparralPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: ChaparralPro;
+  font-weight: bold;
+  src: url("/fonts/ChaparralPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: GoodHeadline;
+  src: url("/fonts/Good-Headline-Regular.ttf") format("opentype");
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 html {
   color: #222;
@@ -17,247 +23,227 @@ html {
   line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+body{
+  font-family: 'GoodHeadline', sans-serif;
+  background-color: #F1EFE9;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+
+/* -------- Site container -------- */
+
+.container{
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
+/* -------- Aside styling start -------- */
+.aside{
+  width: 227px;
+  background-color: #FCFCFC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+/* -- brand logo styling -- */
+.brand-logo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url("/img/logoshadow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+/* -- Nav styling -- */
+.aside-nav{
+  margin-bottom: 150px;
+}
+.aside-menu{
+  list-style: none;
+  text-align: center;
+}
+.aside-menu .nav-link{
+  font-size: 26px;
+  color: #000000;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: capitalize;
   display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+  position: relative;
+  letter-spacing: 1.5px;
+  transition: 0.3s all;
 }
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+.aside-menu .nav-link.active{
+  font-weight: bold;
 }
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+.aside-menu .nav-link:hover{
+  background-color: rgba(0, 0, 0, 0.04);
 }
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
+.aside-menu .nav-link::after{
+  content: "";
+  width: 100%;
+  height:1px;
+  display: block;
   position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+  bottom: 0;
+  left: 0;
+  background: url("/img/line.png") center no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.4;
 }
 
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/* -- social links styling -- */
+.social-links{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.social-links a{
+  padding: 0 20px;
+  display: block;
+  transition: 0.3s all;
+}
+.social-links a:hover{
+  opacity: 0.7;
+}
+/* -------- Aside styling end -------- */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
+/* -------- Main styling start -------- */
+.main{
+  width: 70%;
+  flex: 1;
+}
+/* -- intro section styling -- */
+.intro{
+  width: 100%;
+}
+.intro .thumbnail{
+  min-height: 368px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro .thumbnail img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.intro .title{
+  font-size: 70px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 30px;
+  text-transform: uppercase;
+}
+.intro .content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px;
+}
+.intro p{
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'ChaparralPro', sans-serif;
+}
+.intro .more-btn{
+  background-color: #FC8C15;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 4px 22px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 19px;
+  transition: 0.3s all;
+}
+.intro .more-btn:hover{
+  background-color: #E9861D;
+}
+/* -- slider section styling -- */
+.slider-sec{
+  background: url("/img/slidersectionbg.png");
+  padding: 40px 100px;
+  text-align: center;
+}
+.slider-sec .title{
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.slider-sec .slider{
+  margin-bottom: 20px;
+}
+.owl-stage-outer{
+  position: relative;
+  border: 5px ridge#000000;
+}
+.slider-sec .arrow{
+  position: absolute;
+  background-color: #000000;
+  padding: 13px;
+  border-radius: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.slider-sec .arrow img{
+  max-width: 50px;
   height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  position: absolute;
 }
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+.slider-sec .next{
+  right: -10px;
+  z-index: 5000;
 }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
+.slider-sec .prev{
+  left: -10px;
+  z-index: 5000;
 }
-
-.clearfix::after {
-  clear: both;
+.slider-sec .owl-dot span{
+  background:transparent !important;
+  border: 2px solid;
 }
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+.slider-sec .owl-dot.active span{
+  background:#EC5207 !important;
 }
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.slider-sec .owl-dot:hover span{
+  background:#EC5207 !important;
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+.slider-sec .content .title{
+  font-size: 35x;
 }
-
+.slider-sec .content p{
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.slider-sec .content .btn{
+  background-color: #FC8C15;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 22px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 19px;
+  transition: 0.3s all;
+}
+.slider-sec .content .btn:hover{
+  background-color: #E9861D;
+}
+/* -------- Main styling end -------- */
