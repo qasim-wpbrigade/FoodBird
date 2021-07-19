@@ -24,7 +24,7 @@ html {
 }
 
 body{
-  font-family: 'GoodHeadline', sans-serif;
+  font-family: 'ff-good-headline-web-pro-con', sans-serif;
   background-color: #F1EFE9;
 }
 
@@ -32,7 +32,7 @@ body{
 /* -------- Site container -------- */
 
 .container{
-  max-width: 1024px;
+  max-width: 1025px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -55,8 +55,8 @@ body{
 
 /* -------- Aside styling start -------- */
 .aside{
-  width: 227px;
-  min-width: 227px;
+  width: 229px;
+  min-width: 229px;
   background-color: #FCFCFC;
   display: flex;
   flex-direction: column;
@@ -88,12 +88,12 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  padding: 40px 0;
-  margin-bottom: 30px;
+  padding: 45px 0 53px 0;
+  margin-bottom: 35px;
 }
 /* -- Nav styling -- */
 .aside-nav{
-  margin-bottom: 150px;
+  margin-bottom: 184px;
 }
 .aside-menu{
   list-style: none;
@@ -102,13 +102,14 @@ body{
 .aside-menu .nav-link{
   font-size: 26px;
   color: #000000;
-  padding: 12px;
+  padding: 12.5px;
   text-decoration: none;
   text-transform: capitalize;
   display: block;
   position: relative;
   letter-spacing: 1.5px;
   transition: 0.3s all;
+  letter-spacing: -1px;
 }
 .aside-menu .nav-link.active{
   font-weight: bold;
@@ -137,7 +138,7 @@ body{
   margin-bottom: 40px;
 }
 .social-links a{
-  padding: 0 20px;
+  padding: 0 16px;
   display: block;
   transition: 0.3s all;
 }
@@ -154,9 +155,10 @@ body{
 /* -- intro section styling -- */
 .intro{
   width: 100%;
+  padding-bottom: 19px;
 }
 .intro .thumbnail{
-  min-height: 368px;
+  min-height: 369px;
   background: url("/img/homepagebannerimg.png") center no-repeat;
   background-size: cover;
   width: 100%;
@@ -176,25 +178,30 @@ body{
   color: #ffffff;
   position: absolute;
   text-transform: uppercase;
-  bottom: 20px;
+  bottom: 30px;
+  letter-spacing: -2px;
 }
 .intro .content{
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 100px;
+  padding: 85px 36px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .intro p{
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 37px;
   font-family: 'ChaparralPro', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
 .intro .more-btn{
   background-color: #FC8C15;
   color: #ffffff;
   border-radius: 5px;
-  padding: 4px 22px;
+  padding: 5px 23px;
   border: none;
   outline: none;
   text-decoration: none;
@@ -208,20 +215,25 @@ body{
 /* -- slider section styling -- */
 .slider-sec{
   background: url("/img/slidersectionbg.png");
-  padding: 40px 100px;
+  padding: 60px 36px 90px 36px;
   text-align: center;
 }
-.slider-sec .title{
+.slider-sec .slider-container{
+  max-width: 487px;
+  margin: 0 auto;
+}
+.slider-sec .heading{
   font-size: 28px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 .slider-sec .slider{
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 .owl-stage-outer{
   position: relative;
   border: 5px ridge#000000;
+  max-height: 303px;
 }
 .slider-sec .arrow{
   position: absolute;
@@ -248,6 +260,12 @@ body{
   left: -10px;
   z-index: 5000;
 }
+.slider-sec .owl-dot{
+  position: relative;
+  top: 3px;
+  left: 5px;
+  margin-right: 18px;
+}
 .slider-sec .owl-dot span{
   background:transparent !important;
   border: 2px solid;
@@ -258,19 +276,27 @@ body{
 .slider-sec .owl-dot:hover span{
   background:#EC5207 !important;
 }
+.slider-sec .content{
+  padding: 0 19px 0 15px;
+}
 .slider-sec .content .title{
-  font-size: 35x;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 .slider-sec .content p{
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  font-family: 'ChaparralPro', sans-serif;
+  letter-spacing: 0.15px;
 }
 .slider-sec .content .btn{
   background-color: #FC8C15;
   color: #ffffff;
   border-radius: 5px;
-  padding: 8px 22px;
+  padding: 5px 18px;
   border: none;
+  display: inline-block;
   outline: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -285,44 +311,64 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 64px 56px;
 }
 .partner-sec .title{
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .partners{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 22px;
+  margin-bottom: 48px;
 }
 .partner-card{
   background: #ffffff;
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.03);
 }
 .partner-card .thumbnail{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 183px;
   width: 100%;
 }
 .partner-card .content{
   text-align: center;
   width: 100%;
-  padding: 5px 20px 15px 20px;
+  padding: 5px 20px 47px 20px;
 }
 .partner-card  .name{
   text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.partner-card .content p{
+  font-family: 'ChaparralPro', sans-serif;
+  margin-bottom: 15px;
 }
 .partner-card .partner-link{
   color: #959595;
+  display: inline-block;
+  text-decoration: none;
+  font-style: italic;
+  font-family: 'ChaparralPro', sans-serif;
+  font-size: 18px;
+}
+.partner-card .partner-link::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: relative;
+  top: -3px;
+  background-color: #C8C6C6;
 }
 .partner-sec .partner-btn{
   background-color: #FC8C15;
   color: #ffffff;
   border-radius: 5px;
-  padding: 4px 22px;
+  padding: 4px 17px;
   border: none;
   outline: none;
   text-decoration: none;
@@ -346,13 +392,13 @@ body{
 
 
 /* -------- Responsive mobile view -------- */
-@media(max-width:768px){
+@media(max-width:767px){
   .aside{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 20;
-    margin-left: -227px;
+    margin-left: -229px;
     height: 100vmax;
     overflow-y: auto;
   }
