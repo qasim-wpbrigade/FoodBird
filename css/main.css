@@ -85,7 +85,7 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url("/img/logoshadow.png");
+  background: url("../img/logoshadow.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -127,7 +127,7 @@ body{
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url("/img/line.png") center no-repeat;
+  background: url("../img/line.png") center no-repeat;
   background-size: 100% 100%;
   opacity: 0.4;
 }
@@ -190,7 +190,7 @@ body{
 }
 .intro .thumbnail{
   min-height: 369px;
-  background: url("/img/homepagebannerimg.png") center no-repeat;
+  background: url("../img/homepagebannerimg.png") center no-repeat;
   background-size: cover;
   width: 100%;
   position: relative;
@@ -246,7 +246,7 @@ body{
 }
 /* -- slider section styling -- */
 .slider-sec{
-  background: url("/img/slidersectionbg.png");
+  background: url("../img/slidersectionbg.png");
   padding: 60px 36px 90px 36px;
   text-align: center;
 }
@@ -420,7 +420,7 @@ body{
 /* -------- Main styling end -------- */
 /* -------- footer styling end -------- */
 .footer{
-  background: url("/img/footerimg.png") center no-repeat;
+  background: url("../img/footerimg.png") center no-repeat;
   min-height: 330px;
   width: 100%;
   background-size: cover;
