@@ -35,11 +35,28 @@ body{
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
+  align-items: flex-start;
+}
+.toggle-btn{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 15;
+  display: none;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(238, 238, 238);
+  padding: 5px;
+  cursor: pointer;
+}
+.toggle-btn img{
+  height: 18px;
 }
 
 /* -------- Aside styling start -------- */
 .aside{
   width: 227px;
+  min-width: 227px;
   background-color: #FCFCFC;
   display: flex;
   flex-direction: column;
@@ -47,6 +64,19 @@ body{
   min-height: 100vh;
   position: sticky;
   top: 0;
+  transition: 0.3s all;
+}
+.aside .toggle-btn{
+  position: absolute;
+  right: 25px;
+  left: auto;
+  top: 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.aside .toggle-btn img{
+  height: 18px;
 }
 /* -- brand logo styling -- */
 .brand-logo{
@@ -104,6 +134,7 @@ body{
   list-style: none;
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 .social-links a{
   padding: 0 20px;
@@ -126,11 +157,14 @@ body{
 }
 .intro .thumbnail{
   min-height: 368px;
+  background: url("/img/homepagebannerimg.png") center no-repeat;
+  background-size: cover;
   width: 100%;
   position: relative;
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
+  overflow: hidden;
 }
 .intro .thumbnail img{
   height: 100%;
@@ -141,8 +175,8 @@ body{
   font-size: 70px;
   color: #ffffff;
   position: absolute;
-  bottom: 30px;
   text-transform: uppercase;
+  bottom: 20px;
 }
 .intro .content{
   display: flex;
@@ -246,4 +280,117 @@ body{
 .slider-sec .content .btn:hover{
   background-color: #E9861D;
 }
+/* -- partner section styling -- */
+.partner-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+.partner-sec .title{
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.partners{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.partner-card{
+  background: #ffffff;
+}
+.partner-card .thumbnail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 100%;
+}
+.partner-card .content{
+  text-align: center;
+  width: 100%;
+  padding: 5px 20px 15px 20px;
+}
+.partner-card  .name{
+  text-transform: uppercase;
+}
+.partner-card .partner-link{
+  color: #959595;
+}
+.partner-sec .partner-btn{
+  background-color: #FC8C15;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 4px 22px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 19px;
+  transition: 0.3s all;
+}
+.partner-sec .partner-btn:hover{
+  background-color: #E9861D;
+}
+
 /* -------- Main styling end -------- */
+/* -------- footer styling end -------- */
+.footer{
+  background: url("/img/footerimg.png") center no-repeat;
+  min-height: 330px;
+  width: 100%;
+  background-size: cover;
+}
+/* -------- footer styling end -------- */
+
+
+/* -------- Responsive mobile view -------- */
+@media(max-width:768px){
+  .aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    margin-left: -227px;
+    height: 100vmax;
+    overflow-y: auto;
+  }
+  .aside.active{
+    margin-left: 0px;
+  }
+  body.active{
+    overflow: hidden;
+  }
+  .toggle-btn{
+    display: block;
+  }
+  .slider-sec{
+    padding: 40px 30px;
+  }
+  .partners{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px 0;
+    margin-bottom: 30px;
+  }
+  .intro .content{
+    padding: 30px;
+    text-align: justify;
+  }
+}
+@media(max-width:375px){
+  .slider-sec{
+    padding: 40px 15px;
+  }
+  .partner-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px;
+  }
+  .intro .content{
+    padding: 30px 15px;
+    text-align: justify;
+  }
+}

@@ -15,4 +15,10 @@ $(document).ready(function () {
     // Parameters has to be in square bracket '[]'
     owl.trigger("prev.owl.carousel", [300]);
   });
+
+  // toggle sidebar 
+  $(".toggle-btn").click(function(){
+    $(".aside").toggleClass("active");
+    $("body").toggleClass("active");
+  });
 });
