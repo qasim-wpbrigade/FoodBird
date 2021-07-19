@@ -9,7 +9,23 @@
 }
 @font-face {
   font-family: GoodHeadline;
-  src: url("/fonts/Good-Headline-Regular.ttf") format("opentype");
+  font-weight: 400;
+  src: url("/fonts/Akrobat-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: GoodHeadline;
+  font-weight: 600;
+  src: url("/fonts/Akrobat-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: GoodHeadline;
+  font-weight: 300;
+  src: url("/fonts/Akrobat-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: GoodHeadline;
+  font-weight: 700;
+  src: url("/fonts/Akrobat-Bold.otf") format("opentype");
 }
 *{
   padding: 0;
@@ -24,7 +40,7 @@ html {
 }
 
 body{
-  font-family: 'ff-good-headline-web-pro-con', sans-serif;
+  font-family: 'GoodHeadline', sans-serif;
   background-color: #F1EFE9;
 }
 
@@ -36,21 +52,6 @@ body{
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
-}
-.toggle-btn{
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 15;
-  display: none;
-  border: none;
-  outline: none;
-  border: 1px solid rgb(238, 238, 238);
-  padding: 5px;
-  cursor: pointer;
-}
-.toggle-btn img{
-  height: 18px;
 }
 
 /* -------- Aside styling start -------- */
@@ -68,15 +69,15 @@ body{
 }
 .aside .toggle-btn{
   position: absolute;
-  right: 25px;
+  right: 20px;
   left: auto;
-  top: 15px;
+  top: 25px;
   border: none;
   outline: none;
   background: transparent;
 }
 .aside .toggle-btn img{
-  height: 18px;
+  height: 15px;
 }
 /* -- brand logo styling -- */
 .brand-logo{
@@ -100,9 +101,9 @@ body{
   text-align: center;
 }
 .aside-menu .nav-link{
-  font-size: 26px;
+  font-size: 23px;
   color: #000000;
-  padding: 12.5px;
+  padding: 12.5px 30px;
   text-decoration: none;
   text-transform: capitalize;
   display: block;
@@ -110,9 +111,10 @@ body{
   letter-spacing: 1.5px;
   transition: 0.3s all;
   letter-spacing: -1px;
+  font-weight: 400;
 }
 .aside-menu .nav-link.active{
-  font-weight: bold;
+  font-weight: 700;
 }
 .aside-menu .nav-link:hover{
   background-color: rgba(0, 0, 0, 0.04);
@@ -148,6 +150,35 @@ body{
 /* -------- Aside styling end -------- */
 
 /* -------- Main styling start -------- */
+.mobile-header{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.toggle-btn{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  display: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.toggle-btn img {
+  height: 15px;
+}
+.mobile-header .logo{
+  height: 40px;
+}
 .main{
   width: 70%;
   flex: 1;
@@ -180,6 +211,7 @@ body{
   text-transform: uppercase;
   bottom: 30px;
   letter-spacing: -2px;
+  font-size: 300;
 }
 .intro .content{
   display: flex;
@@ -363,6 +395,11 @@ body{
   position: relative;
   top: -3px;
   background-color: #C8C6C6;
+  transition: 0.3s all;
+  margin: 0 auto;
+}
+.partner-card .partner-link:hover:after{
+  width: 10%;
 }
 .partner-sec .partner-btn{
   background-color: #FC8C15;
@@ -393,6 +430,9 @@ body{
 
 /* -------- Responsive mobile view -------- */
 @media(max-width:767px){
+  .mobile-header{
+    display: flex;
+  }
   .aside{
     position: fixed;
     top: 0;
