@@ -27,13 +27,13 @@
   font-weight: 700;
   src: url("/fonts/Akrobat-Bold.otf") format("opentype");
 }
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-::selection{
-  background-color: #E9861D;
+::selection {
+  background-color: #e9861d;
   color: white;
 }
 html {
@@ -42,15 +42,14 @@ html {
   line-height: 1.4;
 }
 
-body{
-  font-family: 'GoodHeadline', sans-serif;
-  background-color: #F1EFE9;
+body {
+  font-family: "GoodHeadline", sans-serif;
+  background-color: #f1efe9;
 }
-
 
 /* -------- Site container -------- */
 
-.container{
+.container {
   max-width: 1025px;
   margin: 0 auto;
   display: flex;
@@ -58,10 +57,10 @@ body{
 }
 
 /* -------- Aside styling start -------- */
-.aside{
+.aside {
   width: 229px;
   min-width: 229px;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +69,7 @@ body{
   top: 0;
   transition: 0.3s all;
 }
-.aside .toggle-btn{
+.aside .toggle-btn {
   position: absolute;
   right: 20px;
   left: auto;
@@ -79,11 +78,11 @@ body{
   outline: none;
   background: transparent;
 }
-.aside .toggle-btn img{
+.aside .toggle-btn img {
   height: 15px;
 }
 /* -- brand logo styling -- */
-.brand-logo{
+.brand-logo {
   width: 100%;
   display: flex;
   align-items: center;
@@ -96,14 +95,14 @@ body{
   margin-bottom: 35px;
 }
 /* -- Nav styling -- */
-.aside-nav{
+.aside-nav {
   margin-bottom: 184px;
 }
-.aside-menu{
+.aside-menu {
   list-style: none;
   text-align: center;
 }
-.aside-menu .nav-link{
+.aside-menu .nav-link {
   font-size: 23px;
   color: #000000;
   padding: 12.5px 30px;
@@ -116,16 +115,16 @@ body{
   letter-spacing: -1px;
   font-weight: 400;
 }
-.aside-menu .nav-link.active{
+.aside-menu .nav-link.active {
   font-weight: 700;
 }
-.aside-menu .nav-link:hover{
+.aside-menu .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
-.aside-menu .nav-link::after{
+.aside-menu .nav-link::after {
   content: "";
   width: 100%;
-  height:1px;
+  height: 1px;
   display: block;
   position: absolute;
   bottom: 0;
@@ -136,24 +135,24 @@ body{
 }
 
 /* -- social links styling -- */
-.social-links{
+.social-links {
   list-style: none;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
 }
-.social-links a{
+.social-links a {
   padding: 0 16px;
   display: block;
   transition: 0.3s all;
 }
-.social-links a:hover{
+.social-links a:hover {
   opacity: 0.7;
 }
 /* -------- Aside styling end -------- */
 
 /* -------- Main styling start -------- */
-.mobile-header{
+.mobile-header {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -164,7 +163,7 @@ body{
   top: 0;
   z-index: 5;
 }
-.toggle-btn{
+.toggle-btn {
   position: absolute;
   top: 50%;
   left: 20px;
@@ -179,19 +178,19 @@ body{
 .toggle-btn img {
   height: 15px;
 }
-.mobile-header .logo{
+.mobile-header .logo {
   height: 40px;
 }
-.main{
+.main {
   width: 70%;
   flex: 1;
 }
 /* -- intro section styling -- */
-.intro{
+.intro {
   width: 100%;
   padding-bottom: 19px;
 }
-.intro .thumbnail{
+.intro .thumbnail {
   min-height: 369px;
   background: url("../img/homepagebannerimg.png") center no-repeat;
   background-size: cover;
@@ -202,21 +201,20 @@ body{
   justify-content: center;
   overflow: hidden;
 }
-.intro .thumbnail img{
+.intro .thumbnail img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.intro .title{
+.intro .title {
   font-size: 70px;
   color: #ffffff;
   position: absolute;
   text-transform: uppercase;
   bottom: 30px;
   letter-spacing: -2px;
-  font-size: 300;
 }
-.intro .content{
+.intro .content {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -225,15 +223,15 @@ body{
   max-width: 700px;
   margin: 0 auto;
 }
-.intro p{
+.intro p {
   font-size: 20px;
   margin-bottom: 37px;
-  font-family: 'ChaparralPro', sans-serif;
+  font-family: "ChaparralPro", sans-serif;
   line-height: 1.6;
   letter-spacing: 0.2px;
 }
-.intro .more-btn{
-  background-color: #FC8C15;
+.intro .more-btn {
+  background-color: #fc8c15;
   color: #ffffff;
   border-radius: 5px;
   padding: 5px 23px;
@@ -244,34 +242,34 @@ body{
   font-size: 19px;
   transition: 0.3s all;
 }
-.intro .more-btn:hover{
-  background-color: #E9861D;
+.intro .more-btn:hover {
+  background-color: #e9861d;
 }
 /* -- slider section styling -- */
-.slider-sec{
+.slider-sec {
   background: url("../img/slidersectionbg.png");
   padding: 60px 36px 90px 36px;
   text-align: center;
 }
-.slider-sec .slider-container{
+.slider-sec .slider-container {
   max-width: 487px;
   margin: 0 auto;
   position: relative;
 }
-.slider-sec .heading{
+.slider-sec .heading {
   font-size: 28px;
   text-transform: uppercase;
   margin-bottom: 33px;
 }
-.slider-sec .slider{
+.slider-sec .slider {
   margin-bottom: 23px;
 }
-.owl-stage-outer{
+.owl-stage-outer {
   position: relative;
   border: 5px ridge#000000;
   max-height: 303px;
 }
-.slider-sec .arrow{
+.slider-sec .arrow {
   position: absolute;
   background-color: #000000;
   padding: 11px;
@@ -283,49 +281,49 @@ body{
   justify-content: center;
   cursor: pointer;
 }
-.slider-sec .arrow img{
+.slider-sec .arrow img {
   max-width: 50px;
   height: auto;
   position: absolute;
 }
-.slider-sec .next{
+.slider-sec .next {
   right: -8px;
 }
-.slider-sec .prev{
+.slider-sec .prev {
   left: -8px;
 }
-.slider-sec .owl-dot{
+.slider-sec .owl-dot {
   position: relative;
   top: 3px;
   left: 5px;
   margin-right: 18px;
 }
-.slider-sec .owl-dot span{
-  background:transparent !important;
+.slider-sec .owl-dot span {
+  background: transparent !important;
   border: 2px solid;
 }
-.slider-sec .owl-dot.active span{
-  background:#EC5207 !important;
+.slider-sec .owl-dot.active span {
+  background: #ec5207 !important;
 }
-.slider-sec .owl-dot:hover span{
-  background:#EC5207 !important;
+.slider-sec .owl-dot:hover span {
+  background: #ec5207 !important;
 }
-.slider-sec .content{
+.slider-sec .content {
   padding: 0 19px 0 15px;
 }
-.slider-sec .content .title{
+.slider-sec .content .title {
   font-size: 35px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-.slider-sec .content p{
+.slider-sec .content p {
   font-size: 18px;
   margin-bottom: 35px;
-  font-family: 'ChaparralPro', sans-serif;
+  font-family: "ChaparralPro", sans-serif;
   letter-spacing: 0.15px;
 }
-.slider-sec .content .btn{
-  background-color: #FC8C15;
+.slider-sec .content .btn {
+  background-color: #fc8c15;
   color: #ffffff;
   border-radius: 5px;
   padding: 5px 18px;
@@ -337,74 +335,74 @@ body{
   font-size: 19px;
   transition: 0.3s all;
 }
-.slider-sec .content .btn:hover{
-  background-color: #E9861D;
+.slider-sec .content .btn:hover {
+  background-color: #e9861d;
 }
 /* -- partner section styling -- */
-.partner-sec{
+.partner-sec {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 64px 56px;
 }
-.partner-sec .title{
+.partner-sec .title {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-.partners{
+.partners {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
   margin-bottom: 48px;
 }
-.partner-card{
+.partner-card {
   background: #ffffff;
   box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.03);
 }
-.partner-card .thumbnail{
+.partner-card .thumbnail {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 183px;
   width: 100%;
 }
-.partner-card .content{
+.partner-card .content {
   text-align: center;
   width: 100%;
   padding: 5px 20px 47px 20px;
 }
-.partner-card  .name{
+.partner-card .name {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
-.partner-card .content p{
-  font-family: 'ChaparralPro', sans-serif;
+.partner-card .content p {
+  font-family: "ChaparralPro", sans-serif;
   margin-bottom: 15px;
 }
-.partner-card .partner-link{
+.partner-card .partner-link {
   color: #959595;
   display: inline-block;
   text-decoration: none;
   font-style: italic;
-  font-family: 'ChaparralPro', sans-serif;
+  font-family: "ChaparralPro", sans-serif;
   font-size: 18px;
 }
-.partner-card .partner-link::after{
+.partner-card .partner-link::after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
   position: relative;
   top: -3px;
-  background-color: #C8C6C6;
+  background-color: #c8c6c6;
   transition: 0.3s all;
   margin: 0 auto;
 }
-.partner-card .partner-link:hover:after{
+.partner-card .partner-link:hover:after {
   width: 10%;
 }
-.partner-sec .partner-btn{
-  background-color: #FC8C15;
+.partner-sec .partner-btn {
+  background-color: #fc8c15;
   color: #ffffff;
   border-radius: 5px;
   padding: 4px 17px;
@@ -415,13 +413,13 @@ body{
   font-size: 19px;
   transition: 0.3s all;
 }
-.partner-sec .partner-btn:hover{
-  background-color: #E9861D;
+.partner-sec .partner-btn:hover {
+  background-color: #e9861d;
 }
 
 /* -------- Main styling end -------- */
 /* -------- footer styling end -------- */
-.footer{
+.footer {
   background: url("../img/footerimg.png") center no-repeat;
   min-height: 330px;
   width: 100%;
@@ -429,13 +427,12 @@ body{
 }
 /* -------- footer styling end -------- */
 
-
 /* -------- Responsive mobile view -------- */
-@media(max-width:767px){
-  .mobile-header{
+@media (max-width: 767px) {
+  .mobile-header {
     display: flex;
   }
-  .aside{
+  .aside {
     position: fixed;
     top: 0;
     left: 0;
@@ -444,40 +441,40 @@ body{
     height: 100vmax;
     overflow-y: auto;
   }
-  .aside.active{
+  .aside.active {
     margin-left: 0px;
   }
-  body.active{
+  body.active {
     overflow: hidden;
   }
-  .toggle-btn{
+  .toggle-btn {
     display: block;
   }
-  .slider-sec{
+  .slider-sec {
     padding: 40px 30px;
   }
-  .partners{
+  .partners {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px 0;
     margin-bottom: 30px;
   }
-  .intro .content{
+  .intro .content {
     padding: 30px;
     text-align: justify;
   }
 }
-@media(max-width:375px){
-  .slider-sec{
+@media (max-width: 375px) {
+  .slider-sec {
     padding: 40px 15px;
   }
-  .partner-sec{
+  .partner-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 15px;
   }
-  .intro .content{
+  .intro .content {
     padding: 30px 15px;
     text-align: justify;
   }
