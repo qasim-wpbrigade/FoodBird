@@ -32,7 +32,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+::selection{
+  background-color: #E9861D;
+  color: white;
+}
 html {
   color: #222;
   font-size: 1em;
@@ -253,6 +256,7 @@ body{
 .slider-sec .slider-container{
   max-width: 487px;
   margin: 0 auto;
+  position: relative;
 }
 .slider-sec .heading{
   font-size: 28px;
@@ -270,9 +274,9 @@ body{
 .slider-sec .arrow{
   position: absolute;
   background-color: #000000;
-  padding: 13px;
+  padding: 11px;
   border-radius: 50px;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -285,12 +289,10 @@ body{
   position: absolute;
 }
 .slider-sec .next{
-  right: -10px;
-  z-index: 5000;
+  right: -8px;
 }
 .slider-sec .prev{
-  left: -10px;
-  z-index: 5000;
+  left: -8px;
 }
 .slider-sec .owl-dot{
   position: relative;
