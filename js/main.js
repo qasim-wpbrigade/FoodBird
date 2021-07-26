@@ -19,6 +19,5 @@ $(document).ready(function () {
   // toggle sidebar 
   $(".toggle-btn").click(function(){
     $(".aside").toggleClass("active");
-    $("body").toggleClass("active");
   });
 });
